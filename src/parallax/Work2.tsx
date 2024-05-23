@@ -8,6 +8,7 @@ import flex from "../assets/flex.png";
 import news from "../assets/news.png";
 import vocab from "../assets/vocab.png";
 import fromregis from "../assets/redux.png";
+import "./Style.css";
 const work = [
   {
     name: "Pokemon Dex ver 1",
@@ -102,101 +103,14 @@ const Work2 = () => {
 
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"></div>
 
-            <div className="absolute w-full bg-red-400 -bottom-9 p-3 flex flex-col gap-1 group-hover:-bottom-0 group-hover:duration-600 duration-500">
-              <span className="text-gray-800 font-bold text-3xl mb-5 text-center">
+            <div className={`desc-card backdrop-blur-lg absolute w-full -bottom-9  flex flex-col gap-1 group-hover:-bottom-0 group-hover:duration-600 duration-500  text-black`}>
+              <span className="mt-2 font-bold text-3xl mb-2 text-center ">
                 {item.name}
               </span>
-              <p className="text-neutral-800 text-center">{item.desc}</p>
+              <p className=" text-center">{item.desc}</p>
             </div>
           </a>
         ))}
-        {/* <a
-          href="https://github.com/parinyap03/ogs-assignmentNews.git"
-          className="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80 md:col-span-2"
-        >
-          <img
-            src={pokemonv1}
-            loading="lazy"
-            alt="Pokemon Dex ver 1"
-            className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
-          />
-
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"></div>
-
-          <div className="absolute w-full bg-red-400 -bottom-9 p-3 flex flex-col gap-1 group-hover:-bottom-0 group-hover:duration-600 duration-500">
-            <span className="text-gray-800 font-bold text-3xl mb-5 text-center">
-              Pokemon Dex ver 1
-            </span>
-            <p className="text-neutral-800 text-center">
-              a pokemon dex using pokemonapi
-            </p>
-          </div>
-        </a>
-        <a
-            href="https://github.com/parinyap03/ogs-assignmentNews.git"
-            className='group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80 '
-                
-          >
-            <img
-              src={digital}
-              loading="lazy"
-              alt="Digital Name Card"
-              className="absolute inset-0 h-full w-fit object-cover object-center transition duration-200 group-hover:scale-110"
-            />
-
-            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"></div>
-
-            <div className="absolute w-full bg-red-400 -bottom-9 p-3 flex flex-col gap-1 group-hover:-bottom-0 group-hover:duration-600 duration-500">
-              <span className="text-gray-800 font-bold text-3xl mb-5 text-center">
-              Digital Name Card
-              </span>
-              <p className="text-neutral-800 text-center">a digital name card</p>
-            </div>
-          </a>
-
-          <a
-          href="https://github.com/parinyap03/ogs-assignmentNews.git"
-          className="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80 "
-        >
-          <img
-            src={pokemonv1}
-            loading="lazy"
-            alt="Pokemon Dex ver 1"
-            className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
-          />
-
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"></div>
-
-          <div className="absolute w-full bg-red-400 -bottom-9 p-3 flex flex-col gap-1 group-hover:-bottom-0 group-hover:duration-600 duration-500">
-            <span className="text-gray-800 font-bold text-3xl mb-5 text-center">
-              Pokemon Dex ver 1
-            </span>
-            <p className="text-neutral-800 text-center">
-              a pokemon dex using pokemonapi
-            </p>
-          </div>
-        </a>
-        <a
-            href="https://github.com/parinyap03/ogs-assignmentNews.git"
-            className='group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80  md:col-span-2'
-                
-          >
-            <img
-              src={digital}
-              loading="lazy"
-              alt="Digital Name Card"
-              className="absolute inset-0 h-full w-fit object-cover object-center transition duration-200 group-hover:scale-110"
-            />
-
-            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"></div>
-
-            <div className="absolute w-full bg-red-400 -bottom-9 p-3 flex flex-col gap-1 group-hover:-bottom-0 group-hover:duration-600 duration-500">
-              <span className="text-gray-800 font-bold text-3xl mb-5 text-center">
-              Digital Name Card
-              </span>
-              <p className="text-neutral-800 text-center">a digital name card</p>
-            </div>
-          </a> */}
       </div>
     </>
   );
