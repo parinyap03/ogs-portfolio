@@ -1,9 +1,12 @@
 {
+  "homepage" : "http://parinyp03.github.io/ogs-portfolio",
   "name": "my-portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "dev": "vite --host",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
@@ -20,6 +23,7 @@
     "@reduxjs/toolkit": "^2.2.4",
     "antd": "^5.17.0",
     "framer-motion": "^11.1.9",
+    "gh-pages": "^6.1.1",
     "lenis": "^1.0.45",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
