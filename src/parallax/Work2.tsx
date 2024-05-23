@@ -1,5 +1,3 @@
-
-
 import pokemonv1 from "../assets/pokemonv1.png";
 import pokemonv2 from "../assets/pokemonv2.png";
 import digital from "../assets/digital.png";
@@ -9,6 +7,7 @@ import quiz from "../assets/quiz.png";
 import flex from "../assets/flex.png";
 import news from "../assets/news.png";
 import vocab from "../assets/vocab.png";
+import fromregis from "../assets/redux.png";
 const work = [
   {
     name: "Pokemon Dex ver 1",
@@ -73,12 +72,16 @@ const work = [
     link: "https://github.com/parinyap03/ogs-assignment2.git",
     skills: ["TS", "Tailwind", "HTML", "CSS"],
   },
-
+  {
+    name: "Regiter Form ",
+    image: fromregis,
+    desc: "a regiter form use redux",
+    link: "https://github.com/parinyap03/ogs-assignment2.git",
+    skills: ["TS", "Tailwind", "HTML", "CSS"],
+  },
 ];
 const Work2 = () => {
   const span_2 = [1, 4, 5, 8, 9];
-  
-
 
   return (
     <>
@@ -86,7 +89,7 @@ const Work2 = () => {
         {work.map((item, index) => (
           <a
             href={item.link}
-            className={`group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80 ${
+            className={`group relative flex h-48 items-end  overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80 ${
               span_2.includes(index + 1) ? "md:col-span-2" : ""
             }`}
           >

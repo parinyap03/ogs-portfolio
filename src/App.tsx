@@ -17,7 +17,7 @@ import {
   ZoomIn,
   batch,
 } from "react-scroll-motion";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import {
   motion,
   useScroll,
@@ -32,6 +32,7 @@ interface ParallaxProps {
   children: string;
   baseVelocity: number;
 }
+import Lenis from "lenis";
 
 function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
   const baseX = useMotionValue(0);
@@ -48,7 +49,7 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
   const x = useTransform(baseX, (v) => `${wrap(-20, -45, v)}%`);
 
   const directionFactor = useRef<number>(1);
-  useAnimationFrame(( _t,delta) => {
+  useAnimationFrame((_t, delta) => {
     let moveBy = directionFactor.current * baseVelocity * (delta / 10000);
 
     if (velocityFactor.get() < 0) {
@@ -60,6 +61,14 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
     moveBy += directionFactor.current * moveBy * velocityFactor.get();
 
     baseX.set(baseX.get() + moveBy);
+  });
+  useEffect(() => {
+    const lenis = new Lenis();
+    function raf(time: DOMHighResTimeStamp) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
   });
 
   return (
@@ -74,12 +83,12 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
 }
 const App = () => {
   const ZoomInScrollOut = batch(StickyIn(), FadeIn(), ZoomIn(), Fade());
- 
+
   return (
     <>
       <Nav />
 
-      <ScrollContainer >
+      <ScrollContainer>
         <ScrollPage>
           <div id="home">
             <Home />
@@ -127,10 +136,10 @@ const App = () => {
           </Animator>
         </ScrollPage>
 
-        <ScrollPage className="bg-[#06141D] " style={{height:"fit-content"}}>
-          <div id="works" >
+        <ScrollPage className="bg-[#06141D] " style={{ height: "fit-content" }}>
+          <div id="works">
             <ParallaxText baseVelocity={-3}>My Works</ParallaxText>
-              <Work />
+            <Work />
           </div>
         </ScrollPage>
       </ScrollContainer>
