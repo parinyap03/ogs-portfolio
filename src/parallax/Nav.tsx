@@ -78,7 +78,6 @@ const Navbar = () => {
                 stroke="currentColor"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                stroke-width=""
                 viewBox="0 0 24 24"
                 className="w-6 h-6 "
               >

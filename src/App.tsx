@@ -10,9 +10,11 @@ import {
   Animator,
   Fade,
   FadeIn,
+  Move,
   MoveIn,
   ScrollContainer,
   ScrollPage,
+  Sticky,
   StickyIn,
   ZoomIn,
   batch,
@@ -62,6 +64,7 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
 
     baseX.set(baseX.get() + moveBy);
   });
+  
   useEffect(() => {
     const lenis = new Lenis();
     function raf(time: DOMHighResTimeStamp) {
@@ -83,7 +86,6 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
 }
 const App = () => {
   const ZoomInScrollOut = batch(StickyIn(), FadeIn(), ZoomIn(), Fade());
-
   return (
     <>
       <Nav />
@@ -114,7 +116,7 @@ const App = () => {
         <ScrollPage className="bg-[#06141D]">
           <div id="about">
             <ParallaxText baseVelocity={3}>About Me</ParallaxText>
-            <Animator animation={MoveIn(1800, 0)}>
+            <Animator animation={FadeIn()}>
               <About />
             </Animator>
           </div>
@@ -126,7 +128,7 @@ const App = () => {
           <Animator animation={ZoomInScrollOut}>
             <div className="text-white flex justify-center px-[330px]">
               <div className="flex items-center text-head  text-center   ">
-                W{" "}
+                W
                 <div className="letter-o mr-[20px]">
                   <div className="counter"></div>
                 </div>

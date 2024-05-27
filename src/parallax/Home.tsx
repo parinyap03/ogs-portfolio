@@ -54,11 +54,13 @@ const Home = () => {
           className="title min-[430px]:text-[60px] lg:ml-[300px] lg:text-[120px]  md:text-[80px] sm:text-[70px]  min-[320px]:text-[40px] min-[320px]:ml-[70px]  font-bold"
         >
           PORTFOLIO
+
+          
         </motion.h1>
         <motion.img
           src={moon}
           style={{ y: moonY }}
-          className=" lg:w-40 lg:h-40 md:w-40 md:h-40  mt-[-100px]  lg:mr-[10px] xl:ml-[80px] opacity-80 min-[320px]:w-[130px] min-[320px]:h-[130px] min-[320px]:ml-[-30px]"
+          className=" lg:w-40 lg:h-40 md:w-40 md:h-40  mt-[-100px]  lg:mr-[10px] xl:ml-[80px]  opacity-50 min-[320px]:w-[130px] min-[320px]:h-[130px] min-[320px]:ml-[-30px]"
         ></motion.img>
       </motion.div>
   

@@ -1,13 +1,13 @@
 import pokemonv1 from "../assets/pokemonv1.png";
 import pokemonv2 from "../assets/pokemonv2.png";
 import digital from "../assets/digital.png";
-import harry from "../assets/harry.png";
+import harry from "../assets/harry2.png";
 import form from "../assets/form.png";
-import quiz from "../assets/quiz.png";
+import quiz from "../assets/quiz2.png";
 import flex from "../assets/flex.png";
 import news from "../assets/news.png";
-import vocab from "../assets/vocab.png";
-import fromregis from "../assets/redux.png";
+import vocab from "../assets/vocab2.png";
+import fromregis from "../assets/redux2.png";
 import "./Style.css";
 const work = [
   {
@@ -38,17 +38,18 @@ const work = [
     link: "https://github.com/parinyap03/ogs-assignmentNews.git",
     skills: ["TS", "API", "AntD", "Tailwind", "HTML", "CSS"],
   },
-  {
-    name: "Register Form",
-    image: form,
-    desc: "a register form using react-redux",
-    link: "https://github.com/parinyap03/ogs-assignmentNews.git",
-    skills: ["TS", "AntD", "Tailwind", "HTML", "CSS"],
-  },
+
   {
     name: "Quiz",
     image: quiz,
     desc: "a quiz website using react-redux",
+    link: "https://github.com/parinyap03/ogs-assignmentNews.git",
+    skills: ["TS", "AntD", "Tailwind", "HTML", "CSS"],
+  },
+  {
+    name: "Register Form",
+    image: form,
+    desc: "a register form using react-redux",
     link: "https://github.com/parinyap03/ogs-assignmentNews.git",
     skills: ["TS", "AntD", "Tailwind", "HTML", "CSS"],
   },
@@ -103,7 +104,9 @@ const Work2 = () => {
 
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"></div>
 
-            <div className={`desc-card backdrop-blur-lg absolute w-full -bottom-9  flex flex-col gap-1 group-hover:-bottom-0 group-hover:duration-600 duration-500  text-black`}>
+            <div
+              className={`desc-card backdrop-blur-lg absolute w-full -bottom-9  flex flex-col gap-1 group-hover:-bottom-0 group-hover:duration-600 duration-500  text-black`}
+            >
               <span className="mt-2 font-bold text-3xl mb-2 text-center ">
                 {item.name}
               </span>

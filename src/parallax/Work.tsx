@@ -93,6 +93,8 @@ const work = [
     skills: ["TS", "Tailwind", "HTML", "CSS"],
   },
 ];
+
+// Work component swipers
 const Work = () => {
 
   const [ref, inView] = useInView({
