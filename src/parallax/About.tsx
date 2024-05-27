@@ -1,4 +1,4 @@
-import C2 from "@/assets/character/c2.png";
+
 import "./Style.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
