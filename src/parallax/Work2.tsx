@@ -1,6 +1,6 @@
 import pokemonv1 from "../assets/pokemonv1.png";
 import pokemonv2 from "../assets/pokemonv2.png";
-import digital from "../assets/digital.png";
+import digital from "../assets/card2.png";
 import harry from "../assets/harry2.png";
 import form from "../assets/form.png";
 import quiz from "../assets/quiz2.png";

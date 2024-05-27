@@ -15,7 +15,6 @@ const Home = () => {
   const moonY = useTransform(scrollYProgress, [0, 1], ["0%", "300%"]);
   const [mouseX, setMouseX] = useState<number>(0);
   const [mouseY, setMouseY] = useState<number>(0);
-  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -31,55 +30,11 @@ const Home = () => {
     };
   }, []);
 
-  useEffect(() => {
-    const imgFull = new Image();
-    const imgBottom = new Image();
-    const imgMoon = new Image();
-
-    imgFull.src = imgfull;
-    imgBottom.src = imgbt;
-    imgMoon.src = moon;
-
-    const handleImageLoad = () => {
-      if (imgFull.complete && imgBottom.complete && imgMoon.complete) {
-        setIsLoading(false);
-      }
-    };
-
-    imgFull.onload = handleImageLoad;
-    imgBottom.onload = handleImageLoad;
-    imgMoon.onload = handleImageLoad;
-
-    return () => {
-      imgFull.onload = null;
-      imgBottom.onload = null;
-      imgMoon.onload = null;
-    };
-  }, []);
-
   const calculateBackgroundPosition = () => {
     const trackX = (0.5 * mouseX) / 170 + 50;
     const trackY = (4 * mouseY) / 170 + 50;
     return `${trackX}% ${trackY}%`;
   };
-
-  if (isLoading) {
-    return (
-      <div className="flex flex-col justify-center items-center w-full h-full">
-      <img
-        src="https://i.giphy.com/UQ1EI1ML2ABQdbebup.webp"
-        width={50}
-        alt="caticon"
-        className="z-10"
-      />
-      <div className="mt-[-16px]  w-fit ">
-        <button className="rounded-lg  w-fit px-5 py-2 bg-[#336571] text-white">
-         Loading...
-        </button>
-      </div>
-    </div>
-    );
-  }
 
   return (
     <div
@@ -91,7 +46,6 @@ const Home = () => {
       ref={ref}
       className="w-full h-screen overflow-hidden relative grid place-items-center"
     >
-    
       <motion.div className="flex justify-evenly lg:justify-end md:justify-end sm:justify-end font-bold text-white relative z-10 mb-[200px]">
         <motion.h1
           style={{
