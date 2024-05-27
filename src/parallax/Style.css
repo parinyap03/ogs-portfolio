@@ -179,7 +179,6 @@ section > div {
 }
 
 .article {
-  /*  leverage cascade for cross-browser gradients  */
   background: radial-gradient(#E4664C, hsl(0, 0%, 100%)) fixed;
   background: conic-gradient(
       #E4664C,
@@ -240,7 +239,6 @@ section > div {
   transition: all .5s;
   
 }
-
 
 h1{
   text-align:center;

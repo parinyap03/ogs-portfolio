@@ -61,7 +61,7 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
 
     baseX.set(baseX.get() + moveBy);
   });
-  
+
   useEffect(() => {
     const lenis = new Lenis();
     function raf(time: DOMHighResTimeStamp) {
@@ -89,7 +89,7 @@ const App = () => {
 
       <ScrollContainer>
         <ScrollPage>
-          <div id="home">
+          <div id="home" className="h-screen">
             <Home />
           </div>
         </ScrollPage>
