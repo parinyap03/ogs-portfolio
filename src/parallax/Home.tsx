@@ -15,7 +15,6 @@ const Home = () => {
   const moonY = useTransform(scrollYProgress, [0, 1], ["0%", "300%"]);
   const [mouseX, setMouseX] = useState<number>(0);
   const [mouseY, setMouseY] = useState<number>(0);
-
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       const { pageX, pageY } = e;

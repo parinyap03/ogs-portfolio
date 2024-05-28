@@ -5,12 +5,27 @@ import daysk from "@/assets/sky/daysk.jpg";
 import pinktree from "@/assets/sky/pinktree.jpg";
 import cpsk from "@/assets/sky/cpsk.jpg";
 import moon from "@/assets/sticker/stk-red-moon.png";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 const About = () => {
+  const [ref, inView] = useInView({
+    triggerOnce: false,
+    threshold: 0.1,
+  });
   return (
     <>
-      <div className=" lg:px-[100px] h-screen ">
+      <div ref={ref} className=" lg:px-[100px] h-screen ">
         <div className="container  mx-auto flex flex-col md:flex-row items-center  md:my-36 justify-around w-full  ">
-          <div className="flex flex-col w-full lg:w-1/2 justify-center items-start p-4 py-10   ">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={inView ? { opacity: 1, scale: 1 } : {}}
+            transition={{
+              duration: 0.7,
+              delay: 0.4,
+              ease: [0, 0.71, 0.2, 1.01],
+            }}
+            className="flex flex-col w-full lg:w-1/2 justify-center items-start p-4 py-10   "
+          >
             <div className="txt-slide text-5xl">
               <div className="flex items-center text-white p-2">
                 Hell
@@ -31,13 +46,16 @@ const About = () => {
                 </div>
               </div>
             </div>
-            <p className="text-[30px] md:text-base text-gray-50 mb-4 indent-5 p-2 tracking-widest">
+            <div className="text-[30px] md:text-base text-gray-50 mb-4 indent-5 p-2 tracking-widest">
               I am a computer science student from College of Computing Khon
               Kaen University. Who have been learning programming for 3 years
               and always ready to learn new things. I am interested in web
               development and like to create a minimal design.
-            </p>
-            <div className="p-2 flex justify-center sm:justify-start">
+            </div>
+            <div
+              
+              className="p-2 flex justify-center sm:justify-start"
+            >
               <a
                 href="https://github.com/parinyap03"
                 className="bg-transparent hover:bg-[#EF4444] text-[#EF4444] hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-[#EF4444] hover:border-transparent"
@@ -46,9 +64,17 @@ const About = () => {
                 <FontAwesomeIcon icon={faGithub} className="ml-2" />
               </a>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={inView ? { opacity: 1, scale: 1 } : {}}
+            transition={{
+              duration: 0.7,
+              delay: 0.4,
+              ease: [0, 0.71, 0.2, 1.01],
+            }}
+          >
             <div className="sky-img h-full">
               <p>
                 <span>
@@ -67,7 +93,7 @@ const About = () => {
               </p>
             </div>
             <div className="flex justify-end">Bam's photo </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </>

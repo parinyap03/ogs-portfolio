@@ -15,12 +15,14 @@ import {
   ZoomIn,
   batch,
 } from "react-scroll-motion";
-import { useEffect } from "react";
+import { useEffect} from "react";
 import ParallaxText from "./parallax/TxtParallax";
 import Lenis from "lenis";
 
 const App = () => {
   const ZoomInScrollOut = batch(StickyIn(), FadeIn(), ZoomIn(), Fade());
+  // const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
     const lenis = new Lenis();
     function raf(time: DOMHighResTimeStamp) {
@@ -29,6 +31,20 @@ const App = () => {
     }
     requestAnimationFrame(raf);
   });
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     setIsLoading(false);
+  //   }, 5000);
+  //   return () => clearTimeout(timer);
+  // }, []);
+
+  // if (isLoading) {
+  //   return (
+  //     <div className="w-full h-screen flex items-center justify-center">
+  //       <div className="loader">Loading...</div>
+  //     </div>
+  //   );
+  // }
 
   return (
     <>
