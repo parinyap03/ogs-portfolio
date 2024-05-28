@@ -5,7 +5,6 @@ import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { faGithub, faSquareFacebook } from "@fortawesome/free-brands-svg-icons";
 const Social = () => {
   const [scrolled, setScrolled] = useState(false);
-  const [socialOpen, setSocialOpen] = useState(false);
   const handleScroll = () => {
     const offset = window.scrollY;
     if (offset > 300) {
@@ -22,10 +21,7 @@ const Social = () => {
     };
   }, []);
 
-  const toggleMenu = () => {
-    setSocialOpen(!socialOpen);
-  };
-
+ 
   return (
     <>
       
