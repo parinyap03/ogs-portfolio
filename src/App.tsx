@@ -85,7 +85,9 @@ const App = () => {
         <ScrollPage className="bg-[#06141D] " style={{ height: "fit-content" }}>
           <div id="works">
             <ParallaxText text="My Works"></ParallaxText>
-            <Work />
+            <Animator animation={FadeIn()}>
+              <Work />
+            </Animator>
           </div>
         </ScrollPage>
       </ScrollContainer>
