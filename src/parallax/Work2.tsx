@@ -1,13 +1,13 @@
-import pokemonv1 from "../assets/pokemonv1.png";
-import pokemonv2 from "../assets/pokemonv2.png";
-import digital from "../assets/card2.png";
-import harry from "../assets/harry2.png";
-import form from "../assets/form.png";
-import quiz from "../assets/quiz2.png";
-import flex from "../assets/flex.png";
-import news from "../assets/news.png";
-import vocab from "../assets/vocab2.png";
-import fromregis from "../assets/redux2.png";
+import pokemonv1 from "../assets/works/pokemonv1.png";
+import pokemonv2 from "../assets/works/pokemonv2.png";
+import digital from "../assets/works/card2.png";
+import harry from "../assets/works/harry2.png";
+import form from "../assets/works/form.png";
+import quiz from "../assets/works/quiz2.png";
+import flex from "../assets/works/flex.png";
+import news from "../assets/works/news.png";
+import vocab from "../assets/works/vocab2.png";
+import fromregis from "../assets/works/redux2.png";
 import "./Style.css";
 const work = [
   {
@@ -87,7 +87,7 @@ const Work2 = () => {
 
   return (
     <>
-      <div className="p-40 grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8 h-full">
+      <div className="p-40 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 xl:gap-8 h-full">
         {work.map((item, index) => (
           <a
             href={item.link}
@@ -104,13 +104,11 @@ const Work2 = () => {
 
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"></div>
 
-            <div
-              className={`desc-card backdrop-blur-lg absolute w-full -bottom-9  flex flex-col gap-1 group-hover:-bottom-0 group-hover:duration-600 duration-500  text-black`}
-            >
-              <span className="mt-2 font-bold text-3xl mb-2 text-center ">
+            <div className="h-[80px] mb-[15px] hidden lg:block desc-card backdrop-blur-lg absolute w-full text-center -bottom-[55px] flex-col gap-1 group-hover:-bottom-5 group-hover:duration-600 duration-500 text-black">
+              <span className="font-bold text-3xl mb-[5px] text-center ">
                 {item.name}
               </span>
-              <p className=" text-center">{item.desc}</p>
+              <p className=" text-center mt-[6px] mb-[5px]">{item.desc}</p>
             </div>
           </a>
         ))}
