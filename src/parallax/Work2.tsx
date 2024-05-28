@@ -9,6 +9,9 @@ import news from "../assets/works/news.png";
 import vocab from "../assets/works/vocab2.png";
 import fromregis from "../assets/works/redux2.png";
 import "./Style.css";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
 const work = [
   {
     name: "Pokemon Dex ver 1",
@@ -84,12 +87,24 @@ const work = [
 ];
 const Work2 = () => {
   const span_2 = [1, 4, 5, 8, 9];
-
+  const [ref, inView] = useInView({
+    triggerOnce: false,
+    threshold: 0.1,
+  });
   return (
     <>
-      <div className="p-40 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 xl:gap-8 h-full">
+      <motion.div
+        ref={ref}
+        className="p-40 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 xl:gap-8 h-full"
+      >
         {work.map((item, index) => (
-          <a
+          <motion.a
+            initial={{ opacity: 0, y: 50 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{
+              duration: 0.5,
+              delay: 0.5 + index * 0.07,
+            }}
             href={item.link}
             className={`group relative flex h-48 items-end  overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80 ${
               span_2.includes(index + 1) ? "md:col-span-2" : ""
@@ -110,9 +125,9 @@ const Work2 = () => {
               </span>
               <p className=" text-center mt-[6px] mb-[5px]">{item.desc}</p>
             </div>
-          </a>
+          </motion.a>
         ))}
-      </div>
+      </motion.div>
     </>
   );
 };

@@ -4,16 +4,22 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import daysk from "@/assets/sky/daysk.jpg";
 import pinktree from "@/assets/sky/pinktree.jpg";
 import cpsk from "@/assets/sky/cpsk.jpg";
-
+import moon from "@/assets/sticker/stk-red-moon.png";
 const About = () => {
   return (
     <>
       <div className=" lg:px-[100px] h-screen ">
         <div className="container  mx-auto flex flex-col md:flex-row items-center  md:my-36 justify-around w-full  ">
           <div className="flex flex-col w-full lg:w-1/2 justify-center items-start p-4 py-10   ">
-            <div className="txt-slide text-4xl">
+            <div className="txt-slide text-5xl">
               <div className="flex items-center text-white p-2">
-                Hello I'm :
+                Hell
+                <img
+                  src={moon}
+                  alt="stk-could"
+                  className="w-[50px] mr-[10px]"
+                />{" "}
+                I'm
                 <div className="roller ">
                   <span id="rolltext">
                     Parinyaporn
@@ -31,13 +37,13 @@ const About = () => {
               and always ready to learn new things. I am interested in web
               development and like to create a minimal design.
             </p>
-            <div className="p-2">
+            <div className="p-2 flex justify-center sm:justify-start">
               <a
                 href="https://github.com/parinyap03"
-                className=" bg-transparent hover:bg-[#EF4444] text-[#EF4444] hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-[#EF4444] hover:border-transparent"
+                className="bg-transparent hover:bg-[#EF4444] text-[#EF4444] hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-[#EF4444] hover:border-transparent"
               >
                 Explore My Github
-                <FontAwesomeIcon icon={faGithub} className="ml-2 " />
+                <FontAwesomeIcon icon={faGithub} className="ml-2" />
               </a>
             </div>
           </div>

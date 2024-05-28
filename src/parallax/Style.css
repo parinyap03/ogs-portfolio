@@ -245,14 +245,14 @@ h1{
 }
 
 .roller{
-  height: 4.125rem;
+  height: 4.2rem;
   line-height: 4.1rem;
   position: relative;
   overflow: hidden; 
   display: flex;
   justify-content: start;
   align-items: center;
-  width: 260px;
+  width: 480px;
   color: #EF4444;
   left: 10px;
 }
