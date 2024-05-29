@@ -16,28 +16,28 @@ const work = [
   {
     name: "Pokemon Dex ver 1",
     image: pokemonv1,
-    desc: "a pokemon dex using pokemonapi",
+    desc: "learn to get api by redux rtk query",
     link: "https://github.com/parinyap03/ogs-assignmentNews.git",
     skills: ["API", "Tailwind", "HTML", "CSS"],
   },
   {
     name: "Pokemon Dex ver 2",
     image: pokemonv2,
-    desc: "a pokemon dex using pokeapi ver. 2",
+    desc: "learn to  get api by redux rtk query",
     link: "https://github.com/parinyap03/ogs-assignmentNews.git",
     skills: ["API", "Tailwind", "HTML", "CSS"],
   },
   {
     name: "Digital Name Card ",
     image: digital,
-    desc: "a digital name card",
+    desc: "a responsive digital name card ",
     link: "https://github.com/parinyap03/ogs-assignmentNews.git",
     skills: ["API", "Tailwind", "HTML", "CSS"],
   },
   {
     name: "Harry Potter API",
     image: harry,
-    desc: "learn to use API",
+    desc: "learn to use API by axios",
     link: "https://github.com/parinyap03/ogs-assignmentNews.git",
     skills: ["Typescript", "API", "Ant Design", "Tailwind", "HTML", "CSS"],
   },
@@ -59,7 +59,7 @@ const work = [
   {
     name: "Layout Flex",
     image: flex,
-    desc: "learn to use flex",
+    desc: "learn to use flex and module css",
     link: "https://github.com/parinyap03/ogs-assignmentNews.git",
     skills: ["Tailwind", "HTML", "CSS"],
   },
@@ -73,14 +73,14 @@ const work = [
   {
     name: "Vocabulary List",
     image: vocab,
-    desc: "a vocabulary list website ",
+    desc: "a vocabulary list website learn to use react hook",
     link: "https://github.com/parinyap03/ogs-assignment2.git",
     skills: ["Typescript", "Tailwind", "HTML", "CSS"],
   },
   {
     name: "Regiter Form ",
     image: fromregis,
-    desc: "a regiter form use redux",
+    desc: "a regiter form use react redux",
     link: "https://github.com/parinyap03/ogs-assignment2.git",
     skills: ["Typescript", "Tailwind", "HTML", "CSS"],
   },
@@ -95,7 +95,8 @@ const Work2 = () => {
     <>
       <motion.div
         ref={ref}
-        className=" p-40 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 xl:gap-8 h-full"
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 xl:gap-8 h-full p-40"
+      
       >
         {work.map((item, index) => (
           <motion.a
