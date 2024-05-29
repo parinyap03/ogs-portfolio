@@ -116,7 +116,7 @@ const Work2 = () => {
               src={item.image}
               loading="lazy"
               alt={item.name}
-              className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
+              className="img-work absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
             />
 
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"></div>
