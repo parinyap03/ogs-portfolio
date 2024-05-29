@@ -313,3 +313,8 @@ h1{
 
 }
 }
+
+.card-work:hover{
+  box-shadow: 0px 0px 30px 5px rgba(255, 255, 255, 0.3);
+}
+

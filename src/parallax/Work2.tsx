@@ -95,8 +95,9 @@ const Work2 = () => {
     <>
       <motion.div
         ref={ref}
-        className="p-40 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 xl:gap-8 h-full"
+        className=" p-40 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 xl:gap-8 h-full"
       >
+        
         {work.map((item, index) => (
           <motion.a
             initial={{ opacity: 0, y: 50 }}
@@ -106,10 +107,11 @@ const Work2 = () => {
               delay: 0.5 + index * 0.07,
             }}
             href={item.link}
-            className={`group relative flex h-48 items-end  overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80 ${
+            className={`card-work group relative flex h-48 items-end  overflow-hidden rounded-lg  md:h-80 ${
               span_2.includes(index + 1) ? "md:col-span-2" : ""
             }`}
           >
+          
             <img
               src={item.image}
               loading="lazy"
