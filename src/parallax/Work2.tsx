@@ -18,7 +18,7 @@ const work = [
     image: pokemonv1,
     desc: "a pokemon dex using pokemonapi",
     link: "https://github.com/parinyap03/ogs-assignmentNews.git",
-    skills: ["Tailwind", "HTML", "CSS"],
+    skills: ["API", "Tailwind", "HTML", "CSS"],
   },
   {
     name: "Pokemon Dex ver 2",
@@ -39,7 +39,7 @@ const work = [
     image: harry,
     desc: "learn to use API",
     link: "https://github.com/parinyap03/ogs-assignmentNews.git",
-    skills: ["TS", "API", "AntD", "Tailwind", "HTML", "CSS"],
+    skills: ["Typescript", "API", "Ant Design", "Tailwind", "HTML", "CSS"],
   },
 
   {
@@ -47,14 +47,14 @@ const work = [
     image: quiz,
     desc: "a quiz website using react-redux",
     link: "https://github.com/parinyap03/ogs-assignmentNews.git",
-    skills: ["TS", "AntD", "Tailwind", "HTML", "CSS"],
+    skills: ["Typescript", "Ant Design", "Tailwind", "HTML", "CSS"],
   },
   {
     name: "Register Form",
     image: form,
     desc: "a register form using react-redux",
     link: "https://github.com/parinyap03/ogs-assignmentNews.git",
-    skills: ["TS", "AntD", "Tailwind", "HTML", "CSS"],
+    skills: ["Typescript", "Ant Design", "Tailwind", "HTML", "CSS"],
   },
   {
     name: "Layout Flex",
@@ -68,21 +68,21 @@ const work = [
     image: news,
     desc: "learn to use react-router-dom",
     link: "https://github.com/parinyap03/ogs-assignmentNews.git",
-    skills: ["TS", "Tailwind", "HTML", "CSS"],
+    skills: ["Typescript", "Tailwind", "HTML", "CSS"],
   },
   {
     name: "Vocabulary List",
     image: vocab,
     desc: "a vocabulary list website ",
     link: "https://github.com/parinyap03/ogs-assignment2.git",
-    skills: ["TS", "Tailwind", "HTML", "CSS"],
+    skills: ["Typescript", "Tailwind", "HTML", "CSS"],
   },
   {
     name: "Regiter Form ",
     image: fromregis,
     desc: "a regiter form use redux",
     link: "https://github.com/parinyap03/ogs-assignment2.git",
-    skills: ["TS", "Tailwind", "HTML", "CSS"],
+    skills: ["Typescript", "Tailwind", "HTML", "CSS"],
   },
 ];
 const Work2 = () => {
@@ -97,7 +97,6 @@ const Work2 = () => {
         ref={ref}
         className=" p-40 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 xl:gap-8 h-full"
       >
-        
         {work.map((item, index) => (
           <motion.a
             initial={{ opacity: 0, y: 50 }}
@@ -111,7 +110,6 @@ const Work2 = () => {
               span_2.includes(index + 1) ? "md:col-span-2" : ""
             }`}
           >
-          
             <img
               src={item.image}
               loading="lazy"
@@ -121,11 +119,21 @@ const Work2 = () => {
 
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"></div>
 
-            <div className="h-[80px] mb-[15px] hidden lg:block desc-card backdrop-blur-lg absolute w-full text-center -bottom-[55px] flex-col gap-1 group-hover:-bottom-5 group-hover:duration-600 duration-500 text-black">
+            <div className="h-[110px]  hidden lg:block desc-card backdrop-blur-md absolute w-full text-center -bottom-[67px] flex-col gap-1 group-hover:-bottom-0 group-hover:duration-600 duration-500 text-black">
               <span className="font-bold text-3xl mb-[5px] text-center ">
                 {item.name}
               </span>
               <p className=" text-center mt-[6px] mb-[5px]">{item.desc}</p>
+              <div className="flex w-full justify-center">
+                {item.skills?.map((skill, skillIndex) => (
+                  <div
+                    className="opacity-70 rounded-full border-2 ml-1 border-[#1F2937] "
+                    key={skillIndex}
+                  >
+                    <div className="text-[12px] p-1  text-black">{skill}</div>
+                  </div>
+                ))}
+              </div>
             </div>
           </motion.a>
         ))}
