@@ -17,12 +17,11 @@ const About = () => {
       <div ref={ref} className=" lg:px-[100px] h-screen ">
         <div className="container  mx-auto flex flex-col md:flex-row items-center  md:my-36 justify-around w-full  ">
           <motion.div
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={inView ? { opacity: 1, scale: 1 } : {}}
+            initial={{ opacity: 0, x: -48 }}
+            animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{
-              duration: 0.7,
-              delay: 0.4,
-              ease: [0, 0.71, 0.2, 1.01],
+              duration: 0.8,
+              ease: [0, 0, 0, 1],
             }}
             className="flex flex-col w-full lg:w-1/2 justify-center items-start p-4 py-10   "
           >
@@ -52,10 +51,7 @@ const About = () => {
               and always ready to learn new things. I am interested in web
               development and like to create a minimal design.
             </div>
-            <div
-              
-              className="p-2 flex justify-center sm:justify-start"
-            >
+            <div className="p-2 flex justify-center sm:justify-start">
               <a
                 href="https://github.com/parinyap03"
                 className="bg-transparent hover:bg-[#EF4444] text-[#EF4444] hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-[#EF4444] hover:border-transparent"
@@ -67,12 +63,12 @@ const About = () => {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={inView ? { opacity: 1, scale: 1 } : {}}
+         
+            initial={{ opacity: 0, x: 38 }}
+            animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{
-              duration: 0.7,
-              delay: 0.4,
-              ease: [0, 0.71, 0.2, 1.01],
+              duration: 0.8,
+              ease: [0, 0, 0, 1],
             }}
           >
             <div className="sky-img h-full">
